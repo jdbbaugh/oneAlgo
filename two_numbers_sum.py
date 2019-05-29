@@ -14,8 +14,11 @@ def dosNumSum(array, target_sum):
     if array[pointer_left] + array[pointer_right] == target_sum:
       answer_array = [array[pointer_left], array[pointer_right]]
       return answer_array
+    elif array[pointer_left] + array[pointer_right] > target_sum:
+      pointer_right = pointer_right - 1
     else:
       pointer_left = pointer_left + 1
+  return answer_array
 
 
 # def two_number_sum(array_nums, target):
